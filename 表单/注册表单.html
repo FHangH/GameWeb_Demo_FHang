@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>form</title>
+    <style type="text/css">
+        *{
+            box-sizing:border-box;
+        }
+        select{
+            width:60px;
+        }
+        #words{
+            display: none;
+        }
+    </style>
+</head>
+    <body>
+        <form name="user" action="URL;#" method="get">
+            <h2>Users Login</h2>
+            <p><label for="1">Enter your user name:</label></p><input name="users" type="text" size="30" id="1"/>
+            <p><label for="2">Enter your password:</label></p><input name="password" type="password" size="30" id="2"/>
+            <p>Your sex:<br><input type="radio" name="sex" value="man" />Man
+            <input type="radio" name="sex" value="women" />Women</p>
+            <p>Your hobbies:<br>
+            <input type="checkbox" name="hobby" value="Movie" />Movie<br>
+            <input type="checkbox" name="hobby" value="Game" />Game<br>
+            <input type="checkbox" name="hobby" value="Music" />Music<br>
+            <input type="checkbox" name="hobby" value="Run" />Run<br></p>
+            <label for="show">Your Country</label>:<br>
+            <input id="show" type="text" name="">
+            <select name="Country" type="text" id="words" style=" width:159.8px">
+                <option value="live1">United States</option>
+                <option value="live2" selected="selected">China</option>
+                <option value="live3">Japan</option>
+                <option value="live4">United Kingdom</option>
+                <option value="live5">Germany</option>
+                <option value="live6">Russia</option>
+                <option value="live7">Australia</option>
+                <option value="live8">Canada</option>
+                <option value="live9">France</option>
+                <option value="live10">Korea</option>
+                <option value="live11">Italy</option>
+                <option value="live12">Singapore</option>
+            </select>
+            <script type="text/javascript">
+                let show = document.getElementById('show');
+                let words = document.getElementById('words');
+                show.onclick = function(e){
+                    words.style.display = 'block';
+                }
+                words.size = 3;
+                words.onchange = function(e){
+                    var option = this.options[this.selectedIndex];
+                    show.value = option.innerHTML;
+                    words.style.display = 'none';
+                }
+            </script>
+            <p><label for="3">Please make some suggestions:</label></p>
+            <textarea name="suggestion" cols="36" rows="7" warp="38" id="3"></textarea>
+            <p>
+            <textarea name="suggestion" cols="64" rows="2" warp="38" readonly="readonly">&nbsp;&nbsp;Thank you for your participation,this is my first user registration form,I hope to make some suggestions.
+            </textarea>
+            </p>
+            <p>
+                <input type="submit" value="submit" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="reset" value="reset" />
+            </p>
+        </form>
+    </body>
+</html>

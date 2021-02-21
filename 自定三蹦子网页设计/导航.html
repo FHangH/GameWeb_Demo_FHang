@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>导航</title>
+    <style type="text/css">
+        *{padding: 0;
+        margin: 0;}
+        body,html{height:100%;}
+        body{background-image: url("1080/小八.jpg");}
+        #box{width: 280px;
+            height: 400px;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top:0;
+            bottom: 0;
+            margin: auto;
+            transform-style: preserve-3d;
+            transform: rotateX(0deg) rotateY(0deg);
+            animation: go 45s linear infinite;
+           }
+        #box img{width: 480px;
+                 height: 270px;
+                 position: absolute;
+                 left: 0;
+                 top: 0;
+        }
+        #box img:nth-child(1){
+            transform: rotateY(0deg) translateZ(650px);}
+        #box img:nth-child(2){
+            transform: rotateY(90deg) translateZ(650px);}
+        #box img:nth-child(3){
+            transform: rotateY(180deg) translateZ(650px);}
+        #box img:nth-child(4){
+            transform: rotateY(270deg) translateZ(650px);}
+        
+@keyframes go {
+    0%{transform: rotateX(0deg) rotateY(0deg);}
+    25%{transform: rotateX(20deg) rotateY(180deg);}
+    50%{transform: rotateX(0deg) rotateY(360deg);}
+    75%{transform: rotateX(-20deg) rotateY(540deg);}
+    100%{transform: rotateX(0deg) rotateY(720deg);}
+
+}
+    </style>
+</head>
+<body style="background-attachment:fixed"; background="小八.jpg" >
+<embed src="Shiro.mp3" hidden="true" autostart="true" loop="true">
+<body>
+<div id="box">
+    <img src="1080/女武神.jpg">
+    <img src="1080/壁纸.jpg">
+    <img src="1080/音乐欣赏.jpg">
+    <img src="1080/武器.jpg">
+    
+</div>
+</body>
+</html>
